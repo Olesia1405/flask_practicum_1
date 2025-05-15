@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{{ super() }}
+<div class="text-content">
+    <h1>{{ title }}</h1>
+    <p>Explore the website to learn more about us!</p>
+</div>
+
+<div class="image-wrapper">
+    <img src="{{ url_for('static', filename='img/logo.webp') }}"
+         alt="Логотип"
+         class="centered-image">
+</div>
+{% endblock %}

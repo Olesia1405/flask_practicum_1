@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Фиксированное меню -->
+    <nav class="fixed-menu">
+        <ul>
+            {% for item in menu %}
+            <li class="{% if request.path == item.url %}active{% endif %}">
+                <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        &copy; 2025 My Flask App
+    </footer>
+</body>
+</html>

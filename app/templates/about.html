@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{{ super() }}
+<h1>{{ title }}</h1>
+<div class="content">
+    <p>We are a team of passionate developers building web applications with Flask</p>
+    <ul class="about-list">
+        <li>Mission: To teach programming effectively.</li>
+        <li>Vision: Empower people to build their ideas.</li>
+        <li>Values: Collaboration, innovation, and learning.</li>
+    </ul>
+</div>
+{% endblock %}
