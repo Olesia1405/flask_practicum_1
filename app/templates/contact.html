@@ -16,4 +16,10 @@
     <div class="form-submit"><input type="submit" value="Send"></div>
 </form>
 </div>
+<p>Please, contact with our manager: {{ manager.name }}</p>
+<p>Phone Number: {{ manager.contacts.phone_number }}</p>
+<p>Street: {{ manager.contacts.street }}</p>
+<p>City: {{ manager.contacts.city }}</p>
+<p>ZIP Code: {{ manager.contacts.zip }}</p>
+
 {% endblock %}
